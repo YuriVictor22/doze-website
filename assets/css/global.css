@@ -115,3 +115,34 @@ p {
   background: var(--color-primary);
   color: var(--color-white);
 }
+
+html,
+body {
+  width: 100%;
+  overflow-x: clip;
+}
+
+.container {
+  max-width: var(--container-width);
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+main,
+section,
+.container {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  overflow-wrap: break-word;
+}

@@ -1,5 +1,187 @@
 /* =========================
-   TABLET AND DESKTOP
+   MOBILE E ZOOM ALTO
+========================= */
+
+@media (max-width: 979px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  .site-header,
+  .site-header > .container {
+    height: var(--header-height);
+    min-height: var(--header-height);
+  }
+
+  .site-header > .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .desktop-nav,
+  .site-header .button--small {
+    display: none;
+  }
+
+  .logo {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  .menu-button {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .menu-button span {
+    width: 24px;
+    height: 2px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 44px);
+    padding-bottom: 56px;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero__content {
+    width: 100%;
+    min-width: 0;
+    padding-block: 0;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.1rem, 8vw, 3.5rem);
+    overflow-wrap: break-word;
+  }
+
+  .hero__text {
+    max-width: 100%;
+  }
+
+  .hero__photo {
+    width: min(100%, 430px);
+  }
+
+  .hero__highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .method__content,
+  .team__content {
+    grid-template-columns: 1fr;
+  }
+
+  .method__visual {
+    order: 1;
+  }
+
+  .method__phases {
+    order: 2;
+  }
+}
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 480px) {
+  :root {
+    --header-height: 56px;
+    --container-padding: 18px;
+  }
+
+  .site-header,
+  .site-header > .container {
+    height: var(--header-height);
+    min-height: var(--header-height);
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .menu-button {
+    width: 38px;
+    height: 38px;
+    gap: 5px;
+  }
+
+  .menu-button span {
+    width: 22px;
+  }
+
+  .hero {
+    padding-top: calc(var(--header-height) + 32px);
+    padding-bottom: 48px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.9rem, 10vw, 2.7rem);
+    line-height: 1.05;
+  }
+
+  .hero h1 span {
+    margin-top: 8px;
+  }
+
+  .hero__text {
+    font-size: 0.95rem;
+  }
+
+  .hero__actions {
+    width: 100%;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__photo {
+    width: 100%;
+  }
+
+  .method__ring {
+    width: min(82vw, 310px);
+  }
+
+  .method__phase {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .team__roles {
+    padding-inline: 18px;
+  }
+
+  .team__role {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .team__role small {
+    text-align: right;
+  }
+
+  .testimonial-card,
+  .case-card,
+  .service-card {
+    min-width: 0;
+  }
+}
+
+/* =========================
+   A PARTIR DE 640PX
 ========================= */
 
 @media (min-width: 640px) {
@@ -7,43 +189,6 @@
     --container-padding: 28px;
   }
 
-  .hero__actions {
-    flex-direction: row;
-    align-items: center;
-    gap: 24px;
-  }
-}
-
-@media (min-width: 980px) {
-  :root {
-    --header-height: 84px;
-    --container-padding: 32px;
-  }
-
-  .desktop-nav {
-    display: flex;
-  }
-
-  .button--small {
-    display: inline-flex;
-  }
-
-  .menu-button {
-    display: none;
-  }
-
-  .hero {
-    padding-block:
-      calc(var(--header-height) + 90px)
-      100px;
-  }
-
-  main section:not(.hero) {
-    padding-block: 120px;
-  }
-}
-
-@media (min-width: 640px) {
   .hero__actions {
     flex-direction: row;
     align-items: center;
@@ -69,148 +214,11 @@
     display: block;
     margin-bottom: 9px;
   }
-}
 
-@media (min-width: 980px) {
-  .hero {
-    padding-top: calc(var(--header-height) + 66px);
-  }
-
-  .hero__grid {
-    grid-template-columns: minmax(0, 1.18fr) minmax(330px, 0.82fr);
-    gap: 68px;
-  }
-
-  .hero__content {
-    padding-block: 40px;
-  }
-
-  .hero__photo {
-    width: 100%;
-    max-width: 430px;
-  }
-
-  .hero__highlights {
-    margin-top: 70px;
-  }
-
-  .hero__highlights article {
-    padding-right: 32px;
-  }
-}
-
-@media (min-width: 760px) {
-  .method {
-    padding-block: 130px;
-  }
-
-  .method__ring {
-    width: 390px;
-  }
-}
-
-@media (min-width: 980px) {
-  .method {
-    padding-block: 150px 140px;
-  }
-
-  .method__content {
-    grid-template-columns: minmax(380px, 440px) minmax(0, 1fr);
-    gap: 72px;
-    align-items: center;
-    margin-top: 80px;
-  }
-
-  .method__ring {
-    width: 420px;
-  }
-
-  .method__ring::before {
-    inset: 38px;
-  }
-
-  .method__phase {
-    grid-template-columns: 72px 1fr;
-    gap: 20px;
-  }
-}
-
-
-@media (min-width: 640px) {
   .services__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (min-width: 820px) {
-  .services {
-    padding-block: 130px;
-  }
-
-  .services__header {
-    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-    align-items: end;
-    gap: 60px;
-  }
-}
-
-@media (min-width: 1100px) {
-  .services__grid {
-    grid-template-columns: repeat(5, 1fr);
-    margin-top: 72px;
-  }
-
-  .service-card {
-    min-height: 260px;
-    padding: 32px 22px;
-  }
-
-  .service-card h3 {
-    font-size: 1rem;
-  }
-}
-
-
-@media (min-width: 820px) {
-  .team {
-    padding-block: 130px;
-  }
-
-  .team__content {
-    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.8fr);
-    gap: 70px;
-    align-items: center;
-  }
-}
-
-@media (min-width: 1100px) {
-  .team {
-    padding-block: 150px;
-  }
-
-  .team__roles {
-    padding-inline: 26px;
-  }
-}
-
-@media (min-width: 760px) {
-  .cases {
-    padding-block: 130px;
-  }
-
-  .cases__grid {
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 72px;
-  }
-
-  .case-card {
-    min-height: 320px;
-    padding: 42px 36px;
-  }
-}
-
-
-@media (min-width: 640px) {
   .final-cta__actions {
     flex-direction: row;
     align-items: center;
@@ -234,11 +242,225 @@
   }
 }
 
+/* =========================
+   A PARTIR DE 760PX
+========================= */
+
+@media (min-width: 760px) {
+  .diagnosis {
+    padding-block: 120px;
+  }
+
+  .diagnosis__grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 70px;
+  }
+
+  .diagnosis__card {
+    min-height: 270px;
+    padding: 34px 28px 20px;
+    border-right: 1px solid var(--color-border-dark);
+    border-bottom: 0;
+  }
+
+  .diagnosis__card:first-child {
+    padding-left: 0;
+  }
+
+  .diagnosis__card:last-child {
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .testimonials {
+    padding-block: 120px;
+  }
+
+  .testimonials__grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 64px;
+  }
+
+  .testimonial-card {
+    min-height: 300px;
+    padding: 34px 30px;
+  }
+
+  .method {
+    padding-block: 130px;
+  }
+
+  .method__ring {
+    width: 390px;
+  }
+
+  .cases {
+    padding-block: 130px;
+  }
+
+  .cases__grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 72px;
+  }
+
+  .case-card {
+    min-height: 320px;
+    padding: 42px 36px;
+  }
+}
+
+/* =========================
+   A PARTIR DE 820PX
+========================= */
+
 @media (min-width: 820px) {
+  .services {
+    padding-block: 130px;
+  }
+
+  .services__header {
+    grid-template-columns:
+      minmax(0, 1.25fr)
+      minmax(280px, 0.75fr);
+    align-items: end;
+    gap: 60px;
+  }
+
+  .team {
+    padding-block: 130px;
+  }
+
+  .team__content {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(340px, 0.8fr);
+    gap: 70px;
+    align-items: center;
+  }
+
   .final-cta {
     padding-block: 140px 110px;
   }
 }
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 980px) {
+  :root {
+    --header-height: 68px;
+    --container-padding: 32px;
+  }
+
+  .site-header,
+  .site-header > .container {
+    height: var(--header-height);
+    min-height: var(--header-height);
+  }
+
+  .desktop-nav {
+    display: flex;
+  }
+
+  .site-header .button--small {
+    display: inline-flex;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .hero {
+    min-height: min(100svh, 980px);
+    padding-top: calc(var(--header-height) + 66px);
+    padding-bottom: 80px;
+  }
+
+  .hero__grid {
+    grid-template-columns:
+      minmax(0, 1.18fr)
+      minmax(330px, 0.82fr);
+    gap: 68px;
+    align-items: center;
+  }
+
+  .hero__content {
+    min-width: 0;
+    padding-block: 40px;
+  }
+
+  .hero__photo {
+    width: 100%;
+    max-width: 430px;
+  }
+
+  .hero__highlights {
+    margin-top: 70px;
+  }
+
+  .hero__highlights article {
+    padding-right: 32px;
+  }
+
+  .method {
+    padding-block: 150px 140px;
+  }
+
+  .method__content {
+    grid-template-columns:
+      minmax(340px, 420px)
+      minmax(0, 1fr);
+    gap: 72px;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .method__ring {
+    width: min(100%, 420px);
+  }
+
+  .method__ring::before {
+    inset: 38px;
+  }
+
+  .method__phase {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+
+/* =========================
+   DESKTOP GRANDE
+========================= */
+
+@media (min-width: 1100px) {
+  .services__grid {
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 72px;
+  }
+
+  .service-card {
+    min-height: 260px;
+    padding: 32px 22px;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+  }
+
+  .team {
+    padding-block: 150px;
+  }
+
+  .team__roles {
+    padding-inline: 26px;
+  }
+}
+
+/* =========================
+   TELAS COM POUCA ALTURA
+========================= */
 
 @media (max-height: 700px) {
   .mobile-menu {
@@ -248,5 +470,47 @@
 
   .mobile-menu a {
     font-size: clamp(1.45rem, 7vw, 2.1rem);
+  }
+}
+
+/* CORREÇÃO DO DIAGNÓSTICO */
+
+@media (min-width: 760px) {
+  .diagnosis__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 70px;
+  }
+
+  .diagnosis__card {
+    min-width: 0;
+    min-height: 230px;
+    padding: 34px 28px 20px;
+    border-right: 1px solid var(--color-border-dark);
+    border-bottom: 0;
+  }
+
+  .diagnosis__card:first-child {
+    padding-left: 0;
+  }
+
+  .diagnosis__card:last-child {
+    padding-right: 0;
+    border-right: 0;
+  }
+}
+
+@media (max-width: 759px) {
+  .diagnosis__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 48px;
+  }
+
+  .diagnosis__card {
+    min-height: auto;
+    padding-block: 26px;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border-dark);
   }
 }

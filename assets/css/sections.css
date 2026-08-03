@@ -7,7 +7,7 @@
 ========================= */
 
 .hero {
-  min-height: 100svh;
+  min-height: min(100svh, 980px);
   overflow: hidden;
   padding-block:
     calc(var(--header-height) + 52px)
@@ -205,26 +205,108 @@
 }
 
 /* =========================
-   TEMPORARY SECTIONS
+   TESTIMONIALS
 ========================= */
 
-main section:not(.hero) {
-  min-height: 420px;
+.testimonials {
+  padding-block: 100px;
+  background: var(--color-white);
+}
+
+.testimonials__header {
+  max-width: 720px;
+}
+
+.testimonials__header .eyebrow {
+  margin-bottom: 20px;
+}
+
+.testimonials__header h2 {
+  font-weight: 800;
+}
+
+.testimonials__header h2 span {
+  color: var(--color-primary);
+}
+
+.testimonials__grid {
+  display: grid;
+  gap: 1px;
+  margin-top: 54px;
+  border: 1px solid var(--color-border-dark);
+  background: var(--color-border-dark);
+}
+
+.testimonial-card {
+  display: flex;
+  min-height: 280px;
+  flex-direction: column;
+  padding: 30px 26px;
+  background: var(--color-white);
+}
+
+.testimonial-card__quote {
+  color: var(--color-primary);
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.testimonial-card > p {
+  margin-top: 22px;
+  color: var(--color-gray-700);
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.testimonial-card footer {
   display: flex;
   align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 28px;
 }
 
-main section:nth-of-type(3),
-main section:nth-of-type(5) {
-  background: var(--color-gray-100);
+.testimonial-card__avatar {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.72rem;
+  font-weight: 800;
 }
 
-.site-footer {
-  padding-block: 40px;
-  background: var(--color-black);
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.8rem;
+.testimonial-card footer div:last-child {
+  display: flex;
+  flex-direction: column;
 }
+
+.testimonial-card footer strong {
+  font-size: 0.76rem;
+}
+
+.testimonial-card footer span {
+  margin-top: 3px;
+  color: var(--color-gray-500);
+  font-size: 0.66rem;
+}
+
+.testimonials__note {
+  max-width: 620px;
+  margin-top: 22px;
+  color: var(--color-gray-500);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  line-height: 1.6;
+}
+
+
 
 /* =========================
    METHOD
@@ -994,4 +1076,45 @@ main section:nth-of-type(5) {
 
 .site-footer__bar span:nth-child(3) {
   background: var(--color-white);
+}
+
+/* =========================
+   LARGE SCREENS
+========================= */
+
+@media (min-width: 1600px) {
+  :root {
+    --container-width: 1320px;
+  }
+
+  .hero {
+    padding-top: calc(var(--header-height) + 70px);
+  }
+
+  .hero__grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+    gap: 80px;
+  }
+
+  .hero__photo {
+    width: min(100%, 480px);
+  }
+}
+
+@media (min-width: 2200px) {
+  :root {
+    --container-width: 1480px;
+  }
+
+  .hero {
+    min-height: 980px;
+  }
+
+  .hero h1 {
+    font-size: 4.6rem;
+  }
+
+  .hero__text {
+    font-size: 1.2rem;
+  }
 }
