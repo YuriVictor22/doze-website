@@ -1,5 +1,3 @@
-
-
 /* =========================
    HERO
 ========================= */
@@ -200,6 +198,16 @@
   color: rgba(255, 255, 255, 0.62);
   font-size: 0.82rem;
   line-height: 1.55;
+}
+
+/* =========================
+   DIAGNOSIS CTA
+========================= */
+
+.diagnosis__cta {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 48px;
 }
 
 /* =========================

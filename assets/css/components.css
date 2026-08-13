@@ -89,6 +89,103 @@
 }
 
 /* =========================
+   NAV DROPDOWN (Área do cliente)
+========================= */
+
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+.nav-dropdown__toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav-dropdown__toggle::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-fast);
+}
+
+.nav-dropdown__toggle:hover::after,
+.nav-dropdown__toggle[aria-expanded="true"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 0;
+  right: 0;
+  z-index: 1003;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-small);
+  background: rgba(10, 10, 10, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease,
+    visibility 200ms ease;
+}
+
+.nav-dropdown__menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-dropdown__menu a {
+  display: block;
+  text-align: center;
+  padding: 9px 10px;
+  border-radius: calc(var(--radius-small) - 2px);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-dropdown__menu a:hover,
+.nav-dropdown__menu a:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-white);
+}
+
+/* On the scrolled (light) header, the toggle text turns black,
+   but the dropdown panel stays dark, so its border needs to adapt */
+.site-header.is-scrolled .nav-dropdown__menu {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
    BUTTONS
 ========================= */
 
@@ -312,4 +409,3 @@ body.menu-open {
     animation: none;
   }
 }
-

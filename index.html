@@ -31,7 +31,21 @@
           <a href="#metodo">Método</a>
           <a href="#servicos">Serviços</a>
           <a href="#cases">Cases</a>
-          <a href="/NPS">Área do cliente</a>
+
+          <div class="nav-dropdown">
+            <button
+              type="button"
+              class="nav-dropdown__toggle"
+              aria-expanded="false"
+              aria-controls="client-area-menu"
+            >
+              Área do cliente
+            </button>
+
+            <div id="client-area-menu" class="nav-dropdown__menu">
+              <a href="/NPS">Dashboard NPS</a>
+            </div>
+          </div>
         </nav>
 
         <a href="#contato" class="button button--small"> Falar agora </a>
@@ -177,6 +191,12 @@
                 com consistência, posicionamento e repetição estratégica.
               </p>
             </article>
+          </div>
+
+          <div class="diagnosis__cta">
+            <a href="/diagnostico" class="button">
+              Descubra o que está travando sua marca
+            </a>
           </div>
         </div>
       </section>
