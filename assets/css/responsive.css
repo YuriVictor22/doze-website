@@ -252,11 +252,13 @@
   }
 
   .diagnosis__grid {
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-top: 70px;
   }
 
   .diagnosis__card {
+    min-width: 0;
     min-height: 270px;
     padding: 34px 28px 20px;
     border-right: 1px solid var(--color-border-dark);
@@ -306,6 +308,21 @@
   .case-card {
     min-height: 320px;
     padding: 42px 36px;
+  }
+}
+
+@media (max-width: 759px) {
+  .diagnosis__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 48px;
+  }
+
+  .diagnosis__card {
+    min-height: auto;
+    padding-block: 26px;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border-dark);
   }
 }
 
@@ -470,47 +487,5 @@
 
   .mobile-menu a {
     font-size: clamp(1.45rem, 7vw, 2.1rem);
-  }
-}
-
-/* CORREÇÃO DO DIAGNÓSTICO */
-
-@media (min-width: 760px) {
-  .diagnosis__grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 70px;
-  }
-
-  .diagnosis__card {
-    min-width: 0;
-    min-height: 230px;
-    padding: 34px 28px 20px;
-    border-right: 1px solid var(--color-border-dark);
-    border-bottom: 0;
-  }
-
-  .diagnosis__card:first-child {
-    padding-left: 0;
-  }
-
-  .diagnosis__card:last-child {
-    padding-right: 0;
-    border-right: 0;
-  }
-}
-
-@media (max-width: 759px) {
-  .diagnosis__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 48px;
-  }
-
-  .diagnosis__card {
-    min-height: auto;
-    padding-block: 26px;
-    border-right: 0;
-    border-bottom: 1px solid var(--color-border-dark);
   }
 }
