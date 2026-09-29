@@ -274,17 +274,17 @@
     border-right: 0;
   }
 
-  .testimonials {
+  .clients {
     padding-block: 120px;
   }
 
-  .testimonials__grid {
+  .clients__grid {
     grid-template-columns: repeat(3, 1fr);
     margin-top: 64px;
   }
 
-  .testimonial-card {
-    min-height: 300px;
+  .client-card {
+    min-height: 160px;
     padding: 34px 30px;
   }
 

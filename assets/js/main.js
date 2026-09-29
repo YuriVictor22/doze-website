@@ -45,20 +45,10 @@ function closeNavDropdown() {
   navDropdownMenu.classList.remove("is-open");
 }
 
-function syncDropdownWidth() {
-  if (!navDropdownToggle || !navDropdownMenu) return;
-
-  navDropdownMenu.style.width = `${navDropdownToggle.offsetWidth}px`;
-}
-
 function toggleNavDropdown() {
   if (!navDropdownToggle || !navDropdownMenu) return;
 
   const isOpen = navDropdownToggle.getAttribute("aria-expanded") === "true";
-
-  if (!isOpen) {
-    syncDropdownWidth();
-  }
 
   navDropdownToggle.setAttribute("aria-expanded", String(!isOpen));
   navDropdownMenu.classList.toggle("is-open", !isOpen);
@@ -103,7 +93,6 @@ window.addEventListener("keydown", (event) => {
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 980) {
     closeMobileMenu();
-    syncDropdownWidth();
   } else {
     closeNavDropdown();
   }

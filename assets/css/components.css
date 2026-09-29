@@ -133,9 +133,10 @@
 .nav-dropdown__menu {
   position: absolute;
   top: calc(100% + 16px);
-  left: 0;
-  right: 0;
+  left: -16px;
   z-index: 1003;
+  width: max-content;
+  min-width: 100%;
   padding: 6px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-small);
@@ -161,7 +162,7 @@
 
 .nav-dropdown__menu a {
   display: block;
-  text-align: center;
+  text-align: left;
   padding: 9px 10px;
   border-radius: calc(var(--radius-small) - 2px);
   color: rgba(255, 255, 255, 0.92);
