@@ -239,8 +239,8 @@
   display: grid;
   gap: 1px;
   margin-top: 54px;
-  border: 1px solid var(--color-border-dark);
-  background: var(--color-border-dark);
+  border: 1px solid var(--color-gray-300);
+  background: var(--color-gray-300);
 }
 
 .client-card {
@@ -565,8 +565,8 @@
 .services__grid {
   display: grid;
   margin-top: 60px;
-  border-top: 1px solid var(--color-border-dark);
-  border-left: 1px solid var(--color-border-dark);
+  border-top: 1px solid var(--color-gray-300);
+  border-left: 1px solid var(--color-gray-300);
 }
 
 .service-card {
@@ -576,8 +576,8 @@
   flex-direction: column;
   padding: 28px 24px;
   overflow: hidden;
-  border-right: 1px solid var(--color-border-dark);
-  border-bottom: 1px solid var(--color-border-dark);
+  border-right: 1px solid var(--color-gray-300);
+  border-bottom: 1px solid var(--color-gray-300);
   background: var(--color-white);
   transition:
     background-color var(--transition-default),
